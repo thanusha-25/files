@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>add </title>
+<style>
+form{ width:30%;} 
+</style>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br>
+
+     <form action="#" th:action="@{/save}" th:object="${newUser}" method="post">
+     <fieldset><legend><strong>ADD </strong></legend><br><br>
+    <table border="1" width=75%>
+       
+       <tr>
+         <th>Id</th>
+         <td><input type="text" th:field="*{id}" /></td>
+         <td th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></td>
+         </tr>
+       
+        <tr>
+            <th>Pswd</th>
+            <td><input type="text" th:field="*{pswd}" /></td>
+            <td th:if="${#fields.hasErrors('pswd')}" th:errors="*{pswd}"></td>
+        </tr>
+        
+    </table><br><br>
+    <center>   
+            <input type="submit" value="Add" /><br><br>
+       </center>
+    
+    </fieldset>
+</form>
+
+<br><br><br>
+<a th:href="@{/}">Back to Home Page</a>
+</center>
+</body>
+</html>
