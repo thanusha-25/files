@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>add Student</title>
+<style>
+form{ width:30%;} 
+</style>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br>
+
+     <form action="#" th:action="@{/save}" th:object="${newCustomer}" method="post">
+     <fieldset><legend><strong>ADD NEW USER</strong></legend><br><br>
+    <table border="1" width=75%>
+       <tr>
+            <th>UserId</th>
+            <td><input type="text" th:field="*{id}" /></td>
+        </tr>
+        <tr>
+            <th>UserName</th>
+            <td><input type="text" th:field="*{username}" /></td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td><input type="text" th:field="*{pswd}" /></td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td><input type="text" th:field="*{firstName}" /></td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td><input type="text" th:field="*{lastName}" /></td>
+        </tr>
+        <tr>
+            <th>Mobile Number</th>
+            <td><input type="text" th:field="*{mobileNo}" /></td>
+        </tr>
+        
+    </table><br><br>
+    <center>   
+            <input type="submit" value="Sign Up" /><br><br>
+       </center>
+    
+    </fieldset>
+</form>
+
+<br><br><br>
+<a th:href="@{/}">Back to Home Page</a>
+</center>
+</body>
+</html>
