@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<center>Wanna get in touch with me ...!!!.Then feel free to fill the form. You would receive a mail from me.</center>                                         
+ <head>
+     <style> 
+         input[type=text]  
+         {width: 35%;margin:6px 0px ;float:center;} 
+         
+         form{ width:40%;} 
+         
+         label
+         { width:180px;float:left;clear:left;text-align:left;margin:6px 0px}
+        
+         </style>
+         </head>
+         
+         <body>                             
+                                                       
+            <center><br><br><br><br>
+          <div>
+              <form name='myForm' onsubmit="return validateName()" action="test.html">
+              <fieldset><legend><strong>FORM</strong></legend>
+         <label>Full Name    : </label><input name='fname' type=text placeholder='Enter Full Name' ><br>
+         <label>Email Id     : </label><input name='mail' type=text placeholder='Enter mail id' ><br>
+         <label>Mobile Number: </label><input name='mobile' type=text placeholder='Enter mobile number' ><br><br>
+         <center><input type=submit value=Submit ><br></center>
+          </fieldset>
+          </form>
+          </div>
+          </center>
+          
+
+          <script>
+
+              
+              function validateName()
+              {
+                  var mobile=document.forms["myForm"]["mobile"].value;
+                  var name=document.forms["myForm"]["fname"].value;
+             
+             if(name=="")
+             {
+
+               window.alert("Enter a valid name");
+              name.focus(); 
+             return false;
+             }
+            else if(name.length >20) 
+             {
+                window.alert("Name must contain only 20 letters at maximum");
+              name.focus(); 
+             return false; 
+             }
+             
+             var letters = /^[A-Za-z\s]+$/;
+            if(name.match(letters))
+            {
+               return true;
+               }
+             else
+             {
+               alert("Name must contain only alphabets and blank spaces");
+               return false;
+              }
+                
+             if(isNaN(mobile) || mobile.length== 0)
+             {
+                window.alert("Enter a valid Mobile Number");
+                mobile.focus(); 
+                return false;
+             }
+           else if(mobile.length!=10)
+             {
+                window.alert("Enter a 10 digit Mobile Number");
+                mobile.focus(); 
+                return false;
+             }
+
+              }
+          </script>
+
+<p id="error1"></p>  
+</body>
+
+     </html>
