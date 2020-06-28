@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<br><br>
+<center>
+<h1> Deposit-page </h1>
+
+ <form action="#" th:action="@{/deposit/{user}(user=${username})}" method="post">
+  <fieldset><legend><strong>Deposit</strong></legend><br><br>
+     <center>   
+   <label>Enter the amount to deposit :  </label>
+            
+        <input type="text" th:name="balance" /><br><br>
+  
+            <input type="submit" value="Deposit" /><br><br>
+       </center>
+    
+    </fieldset>
+</form>
+
+
+</body>
+</html>

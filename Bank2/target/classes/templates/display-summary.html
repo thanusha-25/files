@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Student List</title>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br>
+<h2>Account Transactions</h2>
+  <table border=1 width=30%>
+  <tr>
+  <th>Activity</th>
+  <th>Amount to be (deposited/withdrawn)</th>
+  <th>Final Balance</th>
+  <th>Date</th>
+  </tr>
+  <tr th:each="tempList : ${list}" align="center">
+  <td th:text="${tempList.activity}" />
+  <td th:text="${tempList.amount}" />
+  <td th:text="${tempList.balance}" />
+  <td th:text="${tempList.date}" />
+  </tr>
+  </table>
+  <br><br><br>
+  <a th:href="@{/}">Back to Home Page</a>
+  </center>
+</body>
+</html>

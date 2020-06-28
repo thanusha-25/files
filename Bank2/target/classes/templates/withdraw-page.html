@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<br><br>
+<center>
+<h1> Withdraw-page </h1>
+
+ <form action="#" th:action="@{/withdrawAmount/{user}(user=${username})}" method="post">
+  <fieldset><legend><strong>Withdraw</strong></legend><br><br>
+     <center>   
+   <label>Enter the amount to withdraw :  </label>
+            
+        <input type="text" th:name="balance" /><br><br>
+  
+            <input type="submit" value="Withdraw" /><br><br>
+       </center>
+    
+    </fieldset>
+</form>
+
+
+</body>
+</html>
