@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Student List</title>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br>
+<h2>User-Profile</h2>
+  <table border=1 width=30%>
+  <tr>
+  <th>UserName</th>
+  <td th:text="${viewUser.username}" />
+  </tr>
+  <tr>
+  <th>FirstName</th>
+   <td th:text="${viewUser.firstName}" />
+   </tr>
+   <tr>
+  <th>LastName</th>
+   <td th:text="${viewUser.lastName}" />
+  </tr>
+  <tr>
+  <th>Mobile Number</th>
+   <td th:text="${viewUser.mobileNo}" />
+  </tr>
+   <th>Account Number</th>
+   <td th:text="${accountNo}" />
+  </tr>
+  </table>
+  <br><br><br>
+  <a th:href="@{/}">Back to Home Page</a>
+  </center>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>add Student</title>
+<style>
+form{ width:50%;} 
+</style>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br>
+
+     <form action="#" th:action="@{/save}" th:object="${newCustomer}" method="post">
+     <fieldset><legend><strong>ADD NEW USER</strong></legend><br><br>
+    
+         <div>  
+               <div>UserName</div>>
+            <div><input type="text" th:field="*{username}"/></div>
+            <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}" required>Username Error</div>
+       </div>
+       <div>
+            <div>Password</div>
+            <div><input type="password" th:field="*{pswd}" /></div>
+            <div th:if="${#fields.hasErrors('pswd')}" th:errors="*{pswd}" required>Pswd Error</div>
+        </div>
+        <div>
+            <div>First Name</div>
+            <div><input type="text" th:field="*{firstName}"/></div>
+            <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" required>FirstName Error</div>
+        </div>
+       <div>
+            <div>Last Name</div>
+            <div><input type="text" th:field="*{lastName}"/></div>
+            <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" required>LastName Error</div>
+        </div>
+        <div>
+            <div>Mobile Number</div>
+            <div><input type="text" th:field="*{mobileNo}"/></div>
+            <div th:if="${#fields.hasErrors('mobileNo')}" th:errors="*{mobileNo}" required>MobileNo Error</div>
+        </div>
+         <div>
+            <div>Email</div>
+            <div><input type="text" th:field="*{email}"/></div>
+            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" required>Email Error</div>
+        </div>
+        
+    <center>   
+            <input type="submit" value="Sign Up" /><br><br>
+       </center>
+    
+    </fieldset>
+</form>
+
+<br><br><br>
+<a th:href="@{/}">Back to Home Page</a>
+</center>
+</body>
+</html>

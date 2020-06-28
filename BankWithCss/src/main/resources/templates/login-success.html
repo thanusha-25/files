@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+ <center>
+<h1>Logged in Successfully....!!</h1>
+<br><br><br><br>
+
+
+
+ <a th:href="@{/viewProfile/{user}(user=${validUser})}"><button>View Profile</button></a>
+<br><br>
+<a th:href="@{/viewBalance/{user}(user=${validUser})}"><button>Balance Enquiry</button></a>
+<br><br>
+<a th:href="@{/withdrawAmount/{user}(user=${validUser})}"><button>Withdraw Amount</button></a>
+<br><br>
+<a th:href="@{/deposit/{user}(user=${validUser})}"><button>Deposit</button></a>
+<br><h3></h3><br>
+<a th:href="@{/accountSummary/{user}(user=${validUser})}"><button>Account Summary</button></a>
+<br><br>
+<a th:href="@{/}"><button>Logout</button></a>
+
+</center>       
+ </body>
+<</html>
